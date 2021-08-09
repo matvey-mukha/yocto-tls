@@ -11,7 +11,7 @@
 #define TLS_ASSERT(x)                                                                                                  \
     do                                                                                                                 \
     {                                                                                                                  \
-        if (!x)                                                                                                        \
+        if (!(x))                                                                                                      \
         {                                                                                                              \
             osal_fatal_error();                                                                                        \
         }                                                                                                              \
@@ -20,7 +20,7 @@
 #define CHECK_BOOL_ERROR(x)                                                                                            \
     do                                                                                                                 \
     {                                                                                                                  \
-        if (x != true)                                                                                                 \
+        if ((x) != true)                                                                                               \
         {                                                                                                              \
             ret_val = false;                                                                                           \
             goto END;                                                                                                  \
@@ -30,7 +30,7 @@
 #define CHECK_MIN_FRAME_LENGTH(x)                                                                                      \
     do                                                                                                                 \
     {                                                                                                                  \
-        if (x < MIN_ENCRYPTED_DATA_SIZE)                                                                               \
+        if ((x) < MIN_ENCRYPTED_DATA_SIZE)                                                                             \
         {                                                                                                              \
             ret_val = false;                                                                                           \
             goto END;                                                                                                  \
@@ -40,7 +40,7 @@
 #define CHECK_EXACT_LENGTH(x, y)                                                                                       \
     do                                                                                                                 \
     {                                                                                                                  \
-        if (x != y)                                                                                                    \
+        if ((x) != (y))                                                                                                \
         {                                                                                                              \
             ret_val = false;                                                                                           \
             goto END;                                                                                                  \

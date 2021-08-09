@@ -10,7 +10,7 @@
 #define CHECK_ERROR(x)                                                                                                 \
     do                                                                                                                 \
     {                                                                                                                  \
-        if (x != CRYPT_OK)                                                                                             \
+        if ((x) != CRYPT_OK)                                                                                           \
         {                                                                                                              \
             osal_fatal_error();                                                                                        \
         }                                                                                                              \
@@ -19,7 +19,7 @@
 #define CHECK_ERROR_NOT_FATAL(x)                                                                                       \
     do                                                                                                                 \
     {                                                                                                                  \
-        if (x != CRYPT_OK)                                                                                             \
+        if ((x) != CRYPT_OK)                                                                                           \
         {                                                                                                              \
             ret_val = false;                                                                                           \
             goto END;                                                                                                  \
@@ -29,7 +29,7 @@
 #define CAL_ASSERT(x)                                                                                                  \
     do                                                                                                                 \
     {                                                                                                                  \
-        if (!x)                                                                                                        \
+        if (!(x))                                                                                                      \
         {                                                                                                              \
             osal_fatal_error();                                                                                        \
         }                                                                                                              \
