@@ -82,6 +82,8 @@ endif()
 target_sources(yocto-tls-unit-test PRIVATE "./test/catch2/unit-test.cpp")
 target_link_libraries(yocto-tls-unit-test PRIVATE Catch2::Catch2 yocto-tls-lib-fixed-random)
 
+enable_testing()
+add_test(yocto-tls-unit-test yocto-tls-unit-test)
 
 
 

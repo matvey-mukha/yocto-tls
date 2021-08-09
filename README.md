@@ -1,5 +1,7 @@
 # Yocto TLS
 
+![cmake](https://github.com/matvey-mukha/yocto-tls/actions/workflows/cmake.yml/badge.svg)
+
 Yocto TLS is a minimalist implementation of the TLS 1.3 cryptographic protocol targeting deeply embedded systems.
 
 The goal is to have a simple and straightforward secure channel implementation based on symmetric cryptography with the smallest code size and RAM consumption possible while being compliant with the TLS 1.3 specification.
